@@ -43,5 +43,45 @@ export class LocalStorageUtilities {
     }
   }
 
+  /**
+   * Converts JavaScript Object to string.
+   * @param object
+   * @returns {string}
+   */
+  public static objectToString(object: any): string {
+    try {
+      return JSON.stringify(object);
+    } catch (exception) {
+      console.error(exception);
+      return null;
+    }
+  }
 
+  /**
+   * Converts stringed Object back to JavaScript Object.
+   * @param string
+   * @returns {any}
+   */
+  public static stringToObject(string: any): any {
+    try {
+      return JSON.parse(string);
+    } catch (exception) {
+      console.error(exception);
+      return null;
+    }
+  }
+
+  /**
+   * Converts stringifyed object to Typed Object.
+   * @param string
+   * @returns {T} typed object
+   */
+  public static stringToTypedObject<T>(string: any): T {
+    try {
+      return JSON.parse(string) as T;
+    } catch (exception) {
+      console.error(exception);
+      return null;
+    }
+  }
 }
