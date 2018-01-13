@@ -4,7 +4,12 @@ Very simple, lightweight module that provides local and session storage to an An
 
 ## How to use
 
-More to come...
+1. run `npm install --save simple-ng5-storage`.
+2. Add the `SimpleNg5StorageModule` to the imports of you app.module.ts.
+3. Add to your component constructor `constructor(private localStorage: SNG5LocalStorageService)`.
+4. Use it in your component methods. To set an item `this.localStorage.setItem('itemKey', 'hello world!');`.
+
+More documentation to come!
 
 
 ## Development Environment Information

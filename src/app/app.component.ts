@@ -26,7 +26,7 @@ export class AppComponent {
   clearAllStorage(): void {
     this.localStorage.clear();
   }
-  
+
 }
 
 // Test Mock Data, Etc...
