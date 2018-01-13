@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+
 import { StorageWindowRefService } from './storage-window-ref.service';
 import { LocalStorageMessage } from './shared/local-storage.message';
 import { BaseStorageService } from './shared/base-storage.service';
 import { LocalStorageType } from './shared/local-storage.type';
 
 @Injectable()
-export class LocalStorageService extends BaseStorageService {
+export class SNG5LocalStorageService extends BaseStorageService {
 
   window: Window;
   storageType: string;

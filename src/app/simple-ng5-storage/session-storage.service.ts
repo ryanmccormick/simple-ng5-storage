@@ -6,7 +6,7 @@ import { LocalStorageType } from './shared/local-storage.type';
 import { StorageWindowRefService } from './storage-window-ref.service';
 
 @Injectable()
-export class SessionStorageService extends BaseStorageService {
+export class SNG5SessionStorageService extends BaseStorageService {
 
   window: Window;
   storageType: string;

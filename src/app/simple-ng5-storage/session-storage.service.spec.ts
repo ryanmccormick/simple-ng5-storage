@@ -1,15 +1,16 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { SessionStorageService } from './session-storage.service';
+import { SNG5SessionStorageService } from './session-storage.service';
+import { StorageWindowRefService } from './storage-window-ref.service';
 
 describe('SessionStorageService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [SessionStorageService]
+      providers: [SNG5SessionStorageService, StorageWindowRefService]
     });
   });
 
-  it('should be created', inject([SessionStorageService], (service: SessionStorageService) => {
+  it('should be created', inject([SNG5SessionStorageService], (service: SNG5SessionStorageService) => {
     expect(service).toBeTruthy();
   }));
 });
