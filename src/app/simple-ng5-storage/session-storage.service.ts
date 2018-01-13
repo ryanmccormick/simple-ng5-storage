@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
-import { StorageWindowRefService } from './storage-window-ref.service';
-import { LocalStorageMessage } from './shared/local-storage.message';
+
 import { BaseStorageService } from './shared/base-storage.service';
+import { LocalStorageMessage } from './shared/local-storage.message';
 import { LocalStorageType } from './shared/local-storage.type';
+import { StorageWindowRefService } from './storage-window-ref.service';
 
 @Injectable()
-export class LocalStorageService extends BaseStorageService {
+export class SessionStorageService extends BaseStorageService {
 
   window: Window;
   storageType: string;
 
   constructor(private storageWindowRef: StorageWindowRefService) {
     super();
-    this.storageType = LocalStorageType.LOCALSTORAGE;
+    this.storageType = LocalStorageType.SESSIONSTORAGE;
 
     try {
       this.window = storageWindowRef.nativewindow;
@@ -20,4 +21,5 @@ export class LocalStorageService extends BaseStorageService {
       console.error(`${LocalStorageMessage.WINDOW_UNAVAILABLE} EXCEPTION::`, exception);
     }
   }
+
 }

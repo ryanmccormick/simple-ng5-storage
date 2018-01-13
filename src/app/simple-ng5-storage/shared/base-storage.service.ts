@@ -3,35 +3,74 @@ import { LocalStorageUtilities } from './local-storage.utilities';
 
 export abstract class BaseStorageService implements ILocalStorage {
 
+  /**
+   * User's local DOM window object.
+   */
   window: Window;
+
+  /**
+   * Storage type definition.
+   */
   storageType: string;
 
+  /**
+   * Clears all storage (local or session defined by storageType).
+   */
   clear(): void {
     this._clear();
   }
 
+  /**
+   * Saves an item to storage.
+   * @param {string} storageKey
+   * @param {string} storageValue
+   */
   setItem(storageKey: string, storageValue: string): void {
     this._setItem(storageKey, storageValue);
   }
 
+  /**
+   * Returns an item from storage.
+   * @param {string} storageKey
+   * @returns {string}
+   */
   getItem(storageKey: string): string {
     return this._getItem(storageKey);
   }
 
+  /**
+   * Removes an item from storage.
+   * @param {string} storageKey
+   */
   removeItem(storageKey: string): void {
     this._removeItem(storageKey);
   }
 
+  /**
+   * Saves an object to storage.
+   * @param {string} storageKey
+   * @param storageValue
+   */
   setObject(storageKey: string, storageValue: any): void {
     const objString = LocalStorageUtilities.objectToString(storageValue);
     this.setItem(storageKey, objString);
   }
 
+  /**
+   * Returns an object from storage.
+   * @param {string} storageKey
+   * @returns {any}
+   */
   getObject(storageKey: string): any {
     const storageValue = this.getItem(storageKey);
     return LocalStorageUtilities.stringToObject(storageValue);
   }
 
+  /**
+   * Returns a typed object from storage.
+   * @param {string} storageKey
+   * @returns {T}
+   */
   getTypedObject<T>(storageKey: string): T {
     const storageValue = this.getItem(storageKey);
     return LocalStorageUtilities.stringToTypedObject<T>(storageValue) as T;
