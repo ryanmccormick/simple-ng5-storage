@@ -1,6 +1,6 @@
 import { LocalStorageUtilities } from './local-storage.utilities';
 
-fdescribe('Static LocalStorageUtilities', () => {
+describe('Static LocalStorageUtilities', () => {
 
   describe('#storageAvailableCheck', () => {
     it ('should be defined', () => {
