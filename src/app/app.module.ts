@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { SimpleNg5StorageModule } from './simple-ng5-storage/simple-ng5-storage.module';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SimpleNg5StorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
