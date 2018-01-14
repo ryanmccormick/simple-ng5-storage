@@ -27,7 +27,7 @@ If you would like to use session storage, just change the service in the constru
 To store an item, use the `setItem` method.
 
 Example:
-```
+```typescript
 export class MyComponent {
 
 	constructor(private localStorage: SNG5LocalStorageService)
@@ -43,7 +43,7 @@ export class MyComponent {
 To return a saved item from storage, use the `getItem` method.
 
 Example:
-```
+```typescript
 export class MyComponent {
 
 	constructor(private localStorage: SNG5LocalStorageService)
@@ -59,7 +59,7 @@ export class MyComponent {
 To remove an item from storage, use the simple `removeItem` method.
 
 Example:
-```
+```typescript
 export class MyComponent {
 
 	constructor(private localStorage: SNG5LocalStorageService)
@@ -75,7 +75,7 @@ export class MyComponent {
 To save an object, it is important to use the `setObject` method.
 
 Example:
-```
+```typescript
 export class MyComponent {
 
 	constructor(private localStorage: SNG5LocalStorageService)
@@ -97,7 +97,7 @@ export class MyComponent {
 To return an object, `getObject` will provide your saved item back as an object.
 
 Example:
-```
+```typescript
 export class MyComponent {
 
 	constructor(private localStorage: SNG5LocalStorageService)
@@ -113,7 +113,7 @@ export class MyComponent {
 To return a typedObject, you specify your type with the `getTypedObject` method.
 
 Example:
-```
+```typescript
 // Example Type
 export interface MyCustomType {
 	id: number;
@@ -135,7 +135,7 @@ export class MyComponent {
 To remove an object from storage, you use the same method you would use for removing a string. 
 
 Example:
-```
+```typescript
 export class MyComponent {
 
 	constructor(private localStorage: SNG5LocalStorageService)
@@ -148,7 +148,7 @@ export class MyComponent {
 ```
 
 ### Clear all LocalStorage with `clear`
-```
+```typescript
 export class MyComponent {
 
 	constructor(private localStorage: SNG5LocalStorageService)
