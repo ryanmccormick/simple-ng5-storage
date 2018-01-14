@@ -148,6 +148,9 @@ export class MyComponent {
 ```
 
 ### Clear all LocalStorage with `clear`
+To clear all local storage, use the `clear` method.
+
+Example:
 ```typescript
 export class MyComponent {
 
@@ -174,4 +177,3 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 To run the tests, you must have a ChromeHeadless-compatible version of Google Chrome installed in your environment.   
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
