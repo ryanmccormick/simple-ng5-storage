@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "packagr": "ng-packagr -p ng-package.json"
+    "packagr": "rm -rf ./dist/ && ng-packagr -p ng-package.json"
   },
   "dependencies": {
     "@angular/animations": "^5.0.0",
