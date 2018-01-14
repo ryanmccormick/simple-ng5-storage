@@ -9,6 +9,7 @@ import { SNG5SessionStorageService } from './session-storage.service';
   imports: [
     CommonModule
   ],
+  exports: [],
   declarations: [],
   providers: [
     StorageWindowRefService, SNG5LocalStorageService, SNG5SessionStorageService

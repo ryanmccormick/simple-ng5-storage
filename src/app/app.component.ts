@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SNG5LocalStorageService } from './simple-ng5-storage/local-storage.service';
+import { SNG5LocalStorageService } from '../../lib/src/local-storage.service';
 
 @Component({
   selector: 'app-root',

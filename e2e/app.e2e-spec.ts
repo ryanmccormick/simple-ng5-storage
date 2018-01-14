@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('simple-ng5-storage App', () => {
+describe('src App', () => {
   let page: AppPage;
 
   beforeEach(() => {
