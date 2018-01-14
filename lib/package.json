@@ -1,0 +1,19 @@
+{
+  "name": "simple-ng5-storage",
+  "version": "0.1.3",
+  "repository": "https://github.com/ryanmccormick/simple-ng5-storage",
+  "author": "Ryan McCormick <npm@rtmccormick.com>",
+  "license": "MIT",
+  "peerdependencies": {
+    "@angular/common": "^5.0.0",
+    "@angular/core": "^5.0.0"
+  },
+  "ngPackage": {
+    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+    "dest": "../dist/my-lib",
+    "workingDirectory": "../.ng_build",
+    "lib": {
+      "entryFile": "src/public_api.ts"
+    }
+  }
+}
